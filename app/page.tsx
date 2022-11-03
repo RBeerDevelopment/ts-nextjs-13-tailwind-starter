@@ -1,57 +1,42 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import { Checkmark } from './checkmark';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js 13!</a>
+    <div className="pt-0 px-8 flex flex-col items-center">
+      <main className="pt-16 px-0 flex flex-col justify-center">
+        <h1 className=" font-bold tracking-tight text-6xl text-center leading-relaxed m-0">
+          Welcome to <a className="text-[#0070f3]" href="https://nextjs.org">Next.js 13</a> Starter
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
+        <p className="text-2xl text-center py-8">Includes the following:</p>
+        <ul className="space-y-1 max-w-md list-inside text-lg">
+          <li className='flex items-center'>
+            <Checkmark /> Next.js 13 (with use of the new app directory)
+          </li>
+          <li className='flex items-center'>
+            <Checkmark /> Tailwind CSS 3.2</li>
+          <li className='flex items-center'>
+            <Checkmark /> Typescript</li>
+          <li className='flex items-center'>
+            <Checkmark /> ESLint</li>
+        </ul>
 
-        <div className={styles.grid}>
-          <a href="https://beta.nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js 13</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Explore the Next.js 13 playground.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates/next.js/app-directory?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>Deploy your Next.js site to a public URL with Vercel.</p>
-          </a>
-        </div>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+      <footer className="flex flex-col mt-12 pt-8 px-0 border-t border-t-[#eaeaea] items-center w-full absolute bottom-8">
+        <p>
+          Created {new Date().getFullYear()} by {' '}
+          <a
+            href="https://robin.beer/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className='text-blue-600 font-bold'
+          >
+            Robin Beer
+          </a>
+        </p>
+
       </footer>
     </div>
-  )
+  );
 }
