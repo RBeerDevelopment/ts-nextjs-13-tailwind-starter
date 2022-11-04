@@ -1,7 +1,7 @@
 <div align="center">
   <h1>ts-nextjs-13-tailwind-starter</h1>
   <p>The super simple Next.js 13 (with app dir) + Tailwind CSS + TypeScript starter</p>
-  <p>Created by <a href="https://robin.beer.com">Robin Beer</a></p>
+  <p>Created by <a href="https://robin.beer/">Robin Beer</a></p>
 </div>
 
 ## Features
